@@ -6,7 +6,11 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-	preprocess: preprocess({})
+	preprocess: preprocess({
+		scss: {
+			prependData: `@import './src/style/app.scss';`
+		}
+	})
 };
 
 export default config;
