@@ -2,4 +2,4 @@
   import Index from '/src/components/pages/index.svelte';
 </script>
   
-<Index lang={'en'}></Index>
+<Index lang={'fr'}></Index>
