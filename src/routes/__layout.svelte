@@ -1,11 +1,21 @@
+<script context="module">
+  /** @type {import('@sveltejs/kit').Load} */
+  export const load = async ({ url }) => ({ props: { url } });
+</script>
+
 <script>
   import Header from '../components/header.svelte'
   import {lang, page} from '../stores'
+  import PageTransition from '../components/utils/PageTransition.svelte';
+  export let url;
 </script>
 
 <div class="layout">
   <Header lang={$lang} page={$page}></Header>
-  <slot lang={$lang}></slot>
+  <PageTransition {url}>
+    <slot lang={$lang}></slot>
+  </PageTransition>
+  
   <footer lang={$lang}></footer>
 </div>
 
@@ -14,6 +24,7 @@
   .layout{
     position: relative;
     max-width: 100%;
+    min-height: 101vh;
     width: 95%;
     @media (min-width:$breakpoint-1) {
       
@@ -22,27 +33,7 @@
       width: 85%;
     }
     margin:0 auto;
-    &::before{
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 100%;
-      width: 1px;
-      background-color: white;
-      clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-      animation: ttb 4s 1s ease forwards;
-    }
-    &::after{
-      content: "";
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      height: 100%;
-      width: 1px;
-      background-color: white;
-      clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-      animation: ttb 4s 2s ease forwards;
-    }
+    border-left: 1px solid white;
+    border-right: 1px solid white;
   }
 </style>
