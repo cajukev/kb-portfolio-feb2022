@@ -5,6 +5,7 @@
 
 <script>
   import Header from '../components/header.svelte'
+  import Footer from '../components/footer.svelte'
   import {lang, page} from '../stores'
   import PageTransition from '../components/utils/PageTransition.svelte';
   export let url;
@@ -16,7 +17,7 @@
     <slot lang={$lang}></slot>
   </PageTransition>
   
-  <footer lang={$lang}></footer>
+  <Footer></Footer>
 </div>
 
 

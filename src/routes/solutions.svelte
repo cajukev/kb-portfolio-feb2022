@@ -1,8 +1,8 @@
 <script>
-  import Index from '/src/components/pages/index.svelte';
+  import Solutions from '/src/components/pages/solutions.svelte';
   import {lang, page} from '../stores'
   $lang = "en"
   $page = "solutions"
 </script>
   
-<Index lang={'en'}></Index>
+<Solutions lang={"en"}></Solutions>

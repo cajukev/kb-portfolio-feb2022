@@ -62,6 +62,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     & h1 {
       color: $main-color;
       font-family: $header-font;
@@ -135,7 +136,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-
+      padding-bottom: 2rem;
       & h2 {
         margin-top: 2rem;
       }
@@ -158,7 +159,7 @@
         width: max-content;
       }
     }
-    @media (min-width: $breakpoint-2) {
+    @media (min-width: $breakpoint-3) {
       & .squares {
         margin-top: 0;
         grid-auto-flow: row;
