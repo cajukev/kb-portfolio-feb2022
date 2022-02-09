@@ -5,8 +5,8 @@
 
 <div class="header-container">
   <a class="lang" href={lang == "en" ? "/fr/" + page : "/" + page}>{lang == "en" ? "Français" : "English"}</a>
-
-  <svg viewBox="0 0 320 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <a class="logo" href={lang == "en" ? "/" : "/fr"}>
+    <svg viewBox="0 0 320 131" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -26,6 +26,8 @@
       fill="#0400C7"
     />
   </svg>
+  </a>
+  
 
   <nav>
     <a href={lang == "en" ? "/" : "/fr"} style={page == "" ? "font-weight:900" : ""}>{lang == "en" ? "About" : "Acceuil"}</a>
@@ -45,8 +47,9 @@
       text-decoration: underline;
       margin-top: 1rem;
     }
-    & svg{
+    & .logo{
       padding: 0 2rem;
+      width: 100%;
       max-width: 20rem;
       margin-top: 1rem;
     }
@@ -68,7 +71,7 @@
         padding-bottom: 0.5rem;
         place-self: end end;
       }
-      & svg{
+      & .logo{
         grid-area: 1 / 1 / span 2 / span 1;
         padding: 0;
         padding-top: 2rem;

@@ -15,7 +15,7 @@ $mini-font-size: clamp(12px,1.2vw,16px);
 
 /* Breakpoints */
 
-$breakpoint-1:420px;
+$breakpoint-1:320px;
 $breakpoint-2:640px;
 $breakpoint-3:768px;
 $breakpoint-4:1024px;
@@ -111,5 +111,21 @@ $breakpoint-6:1536px;
   }
   to{
     transform: scale(1);
+  }
+}
+@keyframes rotate-anim {
+  0%{
+    transform:rotate(0);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+@keyframes rotate-counter-anim {
+  0%{
+    transform:rotate(0);
+  }
+  100%{
+    transform:rotate(-360deg);
   }
 }
