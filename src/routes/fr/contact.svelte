@@ -16,7 +16,7 @@
 
 <script>
   import Contact from '/src/components/pages/contact.svelte';
-  import {lang, page} from '../stores'
+  import {lang, page} from '../../stores'
   export let timeslots;
 	let timeslots_prop= {}
 	$: timeslots_prop = timeslots
