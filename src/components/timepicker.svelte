@@ -194,9 +194,8 @@
 <div
 	class="timepicker"
 >
-	<p class=""><b>{lang=="fr"?"Entrons en contact!":"Let's get in contact"} 👋</b></p>
 	<form class="">
-		<label for="date">{lang=="fr"?"Choisir une date!":"Chose a date!"}</label>
+		<label for="date">{lang=="fr"?"Choisir une date.":"Chose a date"}</label>
 		<input type="date" name="date" id="date" bind:value={datePicked} {min} {max} />
 		<label for="time">{lang=="fr"?"Choisir un temps!":"Chose a time"}</label>
 		<select bind:value={timePicked} name="time" id="time" title="Pick a time">
@@ -222,6 +221,10 @@
 
 <style lang="scss">
 div.timepicker{
-
+	& form{
+		display: flex;
+		flex-direction: column;
+		max-width: 12rem;
+	}
 }
 </style>

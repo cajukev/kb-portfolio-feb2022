@@ -51,7 +51,7 @@
         <path d="M75.4141 51.8312C83.3783 47.6996 88.0581 46.0967 96.9774 45.1569M76.4409 54.9117C84.4719 50.6653 89.1413 48.9894 98.0042 48.2373" stroke="#120439" />
         <path d="M160.273 158.375C166.59 150.44 168.729 146.045 170.602 138.304M163.192 159.799C168.77 152.881 171.691 148.879 173.52 139.728" stroke="#120439" />
       </svg>
-      <a href="">{useLang.estimate}</a>
+      <a sveltekit:prefetch href={lang == "en" ? "/contact" : "/fr/contact"}>{useLang.estimate}</a>
       <p class="info">{@html useLang.commerce.info}</p>
       <p class="price">{@html useLang.commerce.price}</p>
       <p class="included">{@html useLang.commerce.included}</p>
@@ -73,7 +73,7 @@
         <path d="M0 14.4973H45.9597" stroke="#120439" stroke-width="2" />
       </svg>
 
-      <a href="">{useLang.estimate}</a>
+      <a sveltekit:prefetch href={lang == "en" ? "/contact" : "/fr/contact"}>{useLang.estimate}</a>
       <p class="info">{@html useLang.information.info}</p>
       <p class="price">{@html useLang.information.price}</p>
       <p class="included">{@html useLang.information.included}</p>

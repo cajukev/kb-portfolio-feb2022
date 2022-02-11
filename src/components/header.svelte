@@ -32,7 +32,7 @@
   <nav>
     <a href={lang == "en" ? "/" : "/fr"} style={page == "" ? "font-weight:900" : ""}>{lang == "en" ? "About" : "Acceuil"}</a>
     <a href={lang == "en" ? "/solutions" : "/fr/solutions"} style={page == "solutions" ? "font-weight:900" : ""}>{lang == "en" ? "Solutions" : "Solutions"}</a>
-    <a href={lang == "en" ? "/contact" : "/fr/contact"} style={page == "contact" ? "font-weight:900" : ""} id="right">{lang == "en" ? "Contact" : "Contacter"}</a>
+    <a sveltekit:prefetch href={lang == "en" ? "/contact" : "/fr/contact"} style={page == "contact" ? "font-weight:900" : ""} id="right">{lang == "en" ? "Contact" : "Contacter"}</a>
   </nav>
 </div>
 

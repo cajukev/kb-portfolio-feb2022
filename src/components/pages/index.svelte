@@ -53,7 +53,7 @@
     <h2>{useLang.h2}</h2>
     <p>{useLang.p}</p>
     <a href={lang == "en" ? "/solutions" : "/fr/solutions"}>{useLang.a}</a>
-    <a class="button" href={lang == "en" ? "/contact" : "/fr/contact"}>{useLang.button}</a>
+    <a class="button" sveltekit:prefetch href={lang == "en" ? "/contact" : "/fr/contact"}>{useLang.button}</a>
   </div>
 </main>
 
