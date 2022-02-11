@@ -195,7 +195,7 @@
 	class="timepicker"
 >
 	<form class="">
-		<label for="date">{lang=="fr"?"Choisir une date.":"Chose a date"}</label>
+		<label for="date" class="first">{lang=="fr"?"Choisir une date.":"Chose a date"}</label>
 		<input type="date" name="date" id="date" bind:value={datePicked} {min} {max} />
 		<label for="time">{lang=="fr"?"Choisir un temps!":"Chose a time"}</label>
 		<select bind:value={timePicked} name="time" id="time" title="Pick a time">
@@ -221,10 +221,19 @@
 
 <style lang="scss">
 div.timepicker{
+	display: flex;
+	justify-content: center;
 	& form{
 		display: flex;
 		flex-direction: column;
-		max-width: 12rem;
+		width: 12rem;
+		padding: 1rem;
+		background: $bg-color;
+		border-radius: 2rem;
+		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.10), -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.5), inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.025), inset -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.25);
+		& label:not(.first), button{
+			margin-top: 0.5rem;
+		}
 	}
 }
 </style>

@@ -1,10 +1,10 @@
 <script>
-
-  import TimePicker from "../timepicker.svelte"
+  import TimePicker from "../timepicker.svelte";
   import { en, fr } from "./contact.json";
+  import { fly } from "svelte/transition";
   export let lang;
   export let timeslots;
-  
+
   let useLang;
   switch (lang) {
     case "fr":
@@ -16,7 +16,7 @@
   /**
    * State: variable state machine
    * [0] - Nothing clicked
-   * [1] - RDV clicked -> Show form & toggle class 
+   * [1] - RDV clicked -> Show form & toggle class
    */
   let state = 0;
 </script>
@@ -49,8 +49,8 @@
       </a>
       <p>Courriel</p>
     </div>
-    <div class="option" on:click={() => state = 1}>
-      <div class={"square " + (state==1?"selected":"")}>
+    <div class="option" on:click={() => (state = 1)}>
+      <div class={"square " + (state == 1 ? "selected" : "")}>
         <svg viewBox="0 0 96 108" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M85.3333 11.3333H80V0.666626H69.3333V11.3333H26.6667V0.666626H16V11.3333H10.6667C4.74667 11.3333 0.0533333 16.1333 0.0533333 22L0 96.6666C0 102.533 4.74667 107.333 10.6667 107.333H85.3333C91.2 107.333 96 102.533 96 96.6666V22C96 16.1333 91.2 11.3333 85.3333 11.3333ZM85.3333 96.6666H10.6667V43.3333H85.3333V96.6666ZM85.3333 32.6666H10.6667V22H85.3333V32.6666ZM48 59.3333H74.6667V86H48V59.3333Z"
@@ -62,12 +62,17 @@
     </div>
   </div>
   {#if state == 1}
-    <TimePicker lang={lang} timeslots={timeslots}></TimePicker>
+    <div class="timepicker" transition:fly={{ duration: 300, x: -5, opacity: 0.5 }}>
+      <TimePicker {lang} {timeslots} />
+    </div>
   {/if}
-  <p>
-    N'hésitez pas à me contacter pour plus d'information.<br />
+  <div class="final">
+    <p>
+    N'hésitez pas à me contacter pour plus d'information.<br /><br />
     Merci d'avoir visité mon site!
   </p>
+  </div>
+  
 </main>
 
 <style lang="scss">
@@ -107,8 +112,8 @@
             height: 70%;
             filter: drop-shadow(0px 0.1rem 0.2rem rgba(0, 0, 0, 0.1));
           }
-          &.selected{
-            box-shadow: 0rem 0rem 1rem rgba(233, 111, 0, 0.6), inset 0px 0px  0px 0.25rem white;
+          &.selected {
+            box-shadow: 0rem 0rem 1rem rgba(233, 111, 0, 0.6), inset 0px 0px 0px 0.25rem white;
           }
         }
         & p {
@@ -116,6 +121,17 @@
         }
       }
     }
+
+    & .timepicker {
+      margin: 2rem 0;
+    }
+
+    & .final{
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
     @media (min-width: $breakpoint-3) {
       padding-top: 3.5rem;
       & .option {
