@@ -1,3 +1,7 @@
-import { writable } from 'svelte/store';
-export const lang = writable('en');
-export const page = writable('');
+import { writable } from 'svelte-local-storage-store';
+export const lang = writable('en', {
+  lang:''
+});
+export const page = writable('',{
+  page:''
+});

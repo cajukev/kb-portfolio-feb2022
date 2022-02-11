@@ -12,14 +12,6 @@
     "included":"<span>Includes:</span> </br>...</br>...</br>...</br>...",
     "preview":"This could be your site!",
     "a2":"www.votresite.com"
-  },
-  "information":{
-    "h2":"Information",
-    "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. ",
-    "price":"<span>Price:</span> $500-$15000",
-    "included":"<span>Includes:</span> </br>...</br>...</br>...</br>...",
-    "preview":"This could be your site!",
-    "a2":"www.votresite.com"
   }
 },
 "fr":{
@@ -35,14 +27,6 @@
     "price":"<span>Prix:</span> $500-$15000",
     "included":"<span>Inclus:</span> </br>...</br>...</br>...</br>...",
     "preview":"Ceci peut être votre site!",
-    "a2":"www.votresite.com"
-  },
-  "information":{
-    "h2":"Information",
-    "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. ",
-    "price":"<span>Price:</span> $500-$15000",
-    "included":"<span>Includes:</span> </br>...</br>...</br>...</br>...",
-    "preview":"This could be your site!",
     "a2":"www.votresite.com"
   }
 }}

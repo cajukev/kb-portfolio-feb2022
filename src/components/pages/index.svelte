@@ -64,19 +64,9 @@
     align-items: center;
     
     & h1 {
-      color: $main-color;
-      font-family: $header-font;
-      font-weight: 400;
-      font-size: $header-font-size;
-      text-shadow: 0px 0.25rem 0.5rem $main-color-025;
       text-align: center;
       margin-top: 1.5rem;
       max-width: 40rem;
-      & :global(span) {
-        color: $accent-color;
-        font-weight: 700;
-        text-shadow: 0px 0.25rem 0.5rem $accent-color-025;
-      }
     }
     & .squares {
       display: grid;
@@ -89,7 +79,7 @@
       & .square {
         width: 3.5rem;
         height: 3.5rem;
-        border-radius: 1rem;
+        border-radius: 20%;
         box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
         &.v1 {
           background: #7b8dea;
@@ -139,6 +129,8 @@
       padding-bottom: 2rem;
       & h2 {
         margin-top: 2rem;
+        font-weight: 600;
+        font-size: $base-font-size;
       }
       & p {
         margin-top: 1rem;
@@ -146,6 +138,7 @@
       & a:not(.button) {
         text-decoration: underline;
         display: block;
+        width: min-content;
         margin-top: 1rem;
       }
       & a.button {

@@ -6,7 +6,7 @@ $bg-color:#EDEDF6;
 $main-color:#0400C7;
 $main-color-025:#0300c73a;
 
-$accent-color:#FF7C05;
+$accent-color:#ff7b00;
 $accent-color-025:#ff7e052d;
 
 $header-font-size: clamp(22px,2.8vw,48px);
@@ -69,6 +69,22 @@ $breakpoint-6:1536px;
   text-decoration: none;
 }
 
+:global(h1){
+  color: $main-color;
+  font-family: $header-font;
+  font-weight: 400;
+  font-size: $header-font-size;
+  text-shadow: 0px 0.25rem 0.5rem $main-color-025;
+  text-align: center;
+  margin-top: 1.5rem;
+  max-width: 40rem;
+  & :global(span) {
+    text-decoration: underline;
+    text-decoration-color: $accent-color;
+    font-weight: 700;
+    text-shadow: 0px 0.25rem 0.5rem $accent-color-025;
+  }
+}
 
 
 /* Anims */
@@ -127,5 +143,10 @@ $breakpoint-6:1536px;
   }
   100%{
     transform:rotate(-360deg);
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
