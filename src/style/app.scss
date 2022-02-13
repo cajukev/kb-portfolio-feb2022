@@ -60,6 +60,10 @@ $breakpoint-6:1536px;
   max-width: 100vw;
   overflow-x: hidden;
 }
+:global(body){
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 :global(*){
   margin:0;
   padding:0;
