@@ -18,7 +18,6 @@
 	$: timeslots_prop = timeslots
   $lang = "en"
   $page = "contact"
-  
 </script>
   
 <Contact lang={"en"} timeslots={timeslots_prop}></Contact>
