@@ -1,5 +1,5 @@
 <script>
-  import TimePicker from "../timepicker.svelte";
+  import TimePicker from "../time-picker.svelte";
   import { en, fr } from "./contact.json";
   import { fly } from "svelte/transition";
   export let lang;

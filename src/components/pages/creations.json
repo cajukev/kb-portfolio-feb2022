@@ -1,0 +1,60 @@
+{
+  "en": {
+    "h1": "A <span>versatile</span> master of web dev",
+    "h2": "And the results are guaranteed!",
+    "info": "All of my websites are built using modern high speed web technologies, offering the best performance on the market.",
+    "a": "Learn more",
+    "button": "Contact me",
+    "estimate": "Get an estimate",
+    "sites": [
+      {
+        "name": "Lessons from an independant developer",
+        "description": "My blog where I post about web development",
+        "technologies":[
+          {"tech":"html"},
+          {"tech":"css"},
+          {"tech":"js"},
+          {"tech":"svelte"},
+          {"tech":"sass"}
+        ],
+        "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. "
+      },
+      {
+        "name": "Lessons from an independant developer",
+        "description": "My blog where I post about web development",
+        "technologies":[
+          {"tech":"html"},
+          {"tech":"css"},
+          {"tech":"js"},
+          {"tech":"fauna"},
+          {"tech":"sass"}
+        ],
+        "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. "
+      }
+    ]
+  },
+  "fr": {
+    "h1": "Un déceloppeur web <span>versatlie</span>",
+    "h2": "Et les résultats sont garantis!",
+    "info": "Toutes mes solutions sont bâties avec des technologies web à haute vitesse, offrant la meilleure performance technique sur le marché.",
+    "a": "En apprendre plus",
+    "button": "Contacter",
+    "estimate": "Obtenir un estimé",
+    "commerce": {
+      "h2": "Commerce",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. ",
+      "price": "<span>Prix:</span> $500-$15000",
+      "included": "<span>Inclus:</span> </br>...</br>...</br>...</br>...",
+      "preview": "Ceci peut être votre site!",
+      "a2": "www.votresite.com"
+    },
+    "information": {
+      "h2": "Information",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. ",
+      "price": "<span>Price:</span> $500-$15000",
+      "included": "<span>Includes:</span> </br>...</br>...</br>...</br>...",
+      "preview": "This could be your site!",
+      "a2": "www.votresite.com"
+    }
+  }
+}

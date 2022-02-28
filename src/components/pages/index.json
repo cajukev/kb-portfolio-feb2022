@@ -1,14 +1,16 @@
 {"en":{
-  "h1":"Get a website customized <span>for your needs</span> at a reasonable price.",
-  "h2":"And the results are guaranteed!",
-  "p":"In order to stand out on the web, your company needs a high quality custom website.  My mission is to make this accessible at a lower cost, using the latest and greatest web technologies.",
-  "a":"Solutions",
+  "h1":"Looking for the <span>ideal developer?</span> Your hunt may very well be over!",
+  "h2":"I'm ready, are you?",
+  "scores":"(The only Lighthouse scores I accept)",
+  "p":"I am a student in Computer Science at Concordia University, completing my final course this semester where I spend less than 10 hours per week. I'm hoping to start working in web development as soon as possible, with a team that can unlock my full potentiel.",
+  "a":"Creations",
   "button":"Contact me"
 },
 "fr":{
-  "h1":"Offrez-vous un site web à <span>votre image</span> à un prix très raisonnable.",
-  "h2":"Et les résultats sont garantis!",
-  "p":"Afin ",
-  "a":"Solutions",
+  "h1":"À la recherche du <span>développeur idéal?</span> Votre chasse pourrait être terminée!",
+  "h2":"Je suis prêt, êtes vous?",
+  "scores":"(Les seuls résultats lighthouse que j'accepte)",
+  "p":"Je suis étudiant au BAC en Sciences Informatiques à l'Université Concordia dans ma dernière session.  Avec seulement 1 cours restant (moins de 10 heures par semaine) je cherche à me joindre à une équipe qui cherche un développeur web avec beaucoup de potentiel.",
+  "a":"Créations",
   "button":"Contacter"
 }}
