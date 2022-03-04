@@ -117,7 +117,7 @@
       max-width: min-content;
       align-items: center;
       justify-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
       margin-top: 1.5rem;
       & .square {
         width: 3.5rem;
@@ -209,6 +209,7 @@
     @media (min-width: $breakpoint-3) {
       & .squares {
         margin-top: 0;
+        gap: 2rem;
         grid-auto-flow: row;
         grid-template-columns: repeat(3, auto);
         padding: 4rem 0.25rem 0 0.25rem;

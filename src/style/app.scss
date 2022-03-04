@@ -10,7 +10,7 @@ $accent-color:#ff7b00;
 $accent-color-025:#ff7e052d;
 
 $header-font-size: clamp(22px,2.8vw,48px);
-$base-font-size: clamp(14px,1.6vw,22px);
+$base-font-size: clamp(16px,1.6vw,22px);
 $mini-font-size: clamp(12px,1.2vw,16px);
 
 /* Breakpoints */
@@ -22,32 +22,32 @@ $breakpoint-4:1024px;
 $breakpoint-5:1280px;
 $breakpoint-6:1536px;
 
-.bp1, .bp2, .bp3, .bp4, .bp5, .bp6{
+:global(.bp1, .bp2, .bp3, .bp4, .bp5, .bp6){
   display: none;
 }
 
 @media (min-width:$breakpoint-2) {
-  .bp2{
+  :global(.bp2){
     display:initial ;
   }
 }
 @media (min-width:$breakpoint-3) {
-  .bp3{
+  :global(.bp3){
     display:initial ;
   }
 }
 @media (min-width:$breakpoint-4) {
-  .bp4{
+  :global(.bp4){
     display:initial ;
   }
 }
 @media (min-width:$breakpoint-5) {
-  .bp5{
+  :global(.bp5){
     display:initial ;
   }
 }
 @media (min-width:$breakpoint-6) {
-  .bp6{
+  :global(.bp6){
     display:initial ;
   }
 }
@@ -70,6 +70,10 @@ $breakpoint-6:1536px;
 }
 :global(a){
   color: black;
+}
+
+:global(p){
+  line-height: 150%;
 }
 
 :global(h1){

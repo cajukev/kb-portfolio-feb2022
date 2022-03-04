@@ -31,6 +31,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-items: center;
+    & .lang{
+      margin-top: 1rem;
+    }
     & .logo {
       padding: 0 2rem;
       width: 100%;
