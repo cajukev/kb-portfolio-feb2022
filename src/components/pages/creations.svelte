@@ -41,7 +41,7 @@
               <img src={"/" + tech.tech + ".svg"} alt={tech.tech + " logo"} title={tech.tech} />
             {/each}
           </div>
-          <a href={"https://kb-blog-cajukev.vercel.app/" + (lang != langs[0] ? lang : "") } class="site-link">{useLang.visit}</a>
+          <a href={"https://kbweb.ca/" + (lang != langs[0] ? lang : "") } class="site-link">{useLang.visit}</a>
         </div>
         <div class="description">
           <p>{site.info}</p>
