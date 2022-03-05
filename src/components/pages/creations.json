@@ -3,6 +3,7 @@
     "h1": "A <span>superstar</span> of web development",
     "info": "All of my websites are built using modern high speed web technologies, offering the best performance on the market.",
     "a": "Learn more",
+    "visit":"Visit",
     "sites": [
       {
         "name": "Lessons from an independant developer",
@@ -34,10 +35,11 @@
     "h1": "Un <span>star</span> du développement web",
     "info": "Toutes mes solutions sont bâties avec des technologies web à haute vitesse, offrant la meilleure performance technique sur le marché.",
     "a": "En apprendre plus",
+    "visit":"Visiter",
     "sites": [
       {
-        "name": "Lessons from an independant developer",
-        "description": "My blog where I post about web development",
+        "name": "Des leçons sur le développement web moderne",
+        "description": "Mon blog où je publie sur le développement web moderne et mon parcours dans cette discipline.",
         "technologies":[
           {"tech":"html"},
           {"tech":"css"},

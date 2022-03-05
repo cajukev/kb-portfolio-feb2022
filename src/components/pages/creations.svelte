@@ -1,6 +1,7 @@
 <script>
   export let lang;
   import { en, fr } from "./creations.json";
+  const langs = ["en","fr"]
   let useLang;
   switch (lang) {
     case "fr":
@@ -26,20 +27,25 @@
   <section class="solution-list">
     {#each useLang.sites as site, i}
       <div class="soln">
-        <img class="thumbnail" src={"/sites/site-" + (i + 1) + "-400.jpg"} />
+        <div class="img-container">
+          <a href={"https://kb-blog-cajukev.vercel.app/" + (lang != langs[0] ? lang : "") }>
+            <img alt={"site: " + site.name} class="thumbnail" src={"/sites/site-" + (i + 1) + "-400.jpg"} />
+          </a>
+        </div>
+
         <div class="overview">
           <p class="name">{site.name}</p>
           <p class="description">{site.description}</p>
           <div class="technologies">
             {#each site.technologies as tech}
-              <img src={"/static/"+ tech.tech + ".svg"} alt={tech.tech + " logo"} title={tech.tech} />
+              <img src={"/" + tech.tech + ".svg"} alt={tech.tech + " logo"} title={tech.tech} />
             {/each}
           </div>
-          <a href="/" class="site-link">Link</a>
+          <a href={"https://kb-blog-cajukev.vercel.app/" + (lang != langs[0] ? lang : "") } class="site-link">{useLang.visit}</a>
         </div>
         <div class="description">
           <p>{site.info}</p>
-          <a href="/">Link</a>
+          <a href={"/" + (lang != langs[0] ? lang : "") }>Code</a>
         </div>
       </div>
     {/each}
@@ -106,7 +112,7 @@
     & section.solution-list {
       margin-bottom: 1.5rem;
       text-align: center;
-      
+
       & .soln {
         margin-top: 1.5rem;
         padding-top: 1rem;
@@ -115,11 +121,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        & img.thumbnail {
-          border: 1px solid white;
-          max-width: 14rem;
-          max-height: 14rem;
+        & .img-container {
+          overflow: hidden;
+          & img.thumbnail {
+            border: 1px solid white;
+            max-width: 14rem;
+            max-height: 14rem;
+            transform: scale(1);
+            transition: 1s ease;
+            transform-origin: 20% 20%;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
         }
+
         & .overview {
           height: 100%;
           display: flex;
@@ -179,9 +195,16 @@
         text-align: start;
         gap: 0rem 1rem;
         padding-top: 0;
-        & img.thumbnail {
-          border: none;
+        & .img-container {
           border-right: 1px solid white;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          & img.thumbnail {
+            border: none;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+          }
         }
         & div.overview {
           border-right: 1px solid white;
@@ -189,7 +212,7 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          padding: 2rem 0;
+          padding: 2rem 1rem 2rem 0;
           box-sizing: border-box;
           & img {
             height: 2.5rem;
@@ -199,7 +222,7 @@
           height: 100%;
           display: flex;
           flex-direction: column;
-          padding: 2rem 0;
+          padding: 2rem 1rem 2rem 0;
           box-sizing: border-box;
         }
       }
