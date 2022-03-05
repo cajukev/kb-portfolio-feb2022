@@ -26,25 +26,23 @@
   <section class="solution-list">
     {#each useLang.sites as site, i}
       <div class="soln">
-      <img class="thumbnail" src={"/sites/site-"+(i+1)+"-400.jpg"}/>
-      <div class="overview">
-        <p class="name">{site.name}</p>
-        <p class="description">{site.description}</p>
-        <div class="technologies">
-          {#each site.technologies as tech}
-            <img src={tech.tech+".svg"} alt={tech.tech+" logo"} title={tech.tech}>
-          {/each}
+        <img class="thumbnail" src={"/sites/site-" + (i + 1) + "-400.jpg"} />
+        <div class="overview">
+          <p class="name">{site.name}</p>
+          <p class="description">{site.description}</p>
+          <div class="technologies">
+            {#each site.technologies as tech}
+              <img src={"/static/"+ tech.tech + ".svg"} alt={tech.tech + " logo"} title={tech.tech} />
+            {/each}
+          </div>
+          <a href="/" class="site-link">Link</a>
         </div>
-        <a href="/" class="site-link">Link</a>
+        <div class="description">
+          <p>{site.info}</p>
+          <a href="/">Link</a>
+        </div>
       </div>
-      <div class="description">
-        <p>{site.info}</p>
-        <a href="/">Link</a>
-      </div>
-      
-    </div>
     {/each}
-    
   </section>
 </main>
 
@@ -75,7 +73,8 @@
           &.special {
             width: 6rem;
             height: 6rem;
-            background: linear-gradient(135deg, #ff9c41 0%, #f27c0f 100%), linear-gradient(135deg, #ff7c05 0%, rgba(255, 184, 119, 0.770833) 99.99%, rgba(255, 122, 0, 0) 100%);
+            background: linear-gradient(135deg, #ff9c41 0%, #f27c0f 100%),
+              linear-gradient(135deg, #ff7c05 0%, rgba(255, 184, 119, 0.770833) 99.99%, rgba(255, 122, 0, 0) 100%);
             box-shadow: 0rem 0rem 1rem rgba(233, 111, 0, 0.6);
             animation: square-spin 10s ease-in-out infinite;
           }
@@ -106,6 +105,8 @@
     }
     & section.solution-list {
       margin-bottom: 1.5rem;
+      text-align: center;
+      
       & .soln {
         margin-top: 1.5rem;
         padding-top: 1rem;
@@ -114,21 +115,30 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        & img.thumbnail{
+        & img.thumbnail {
           border: 1px solid white;
           max-width: 14rem;
           max-height: 14rem;
         }
-        & .overview{
-          & .technologies{
-            & img:not(:first-of-type){
+        & .overview {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 2rem 0;
+          box-sizing: border-box;
+          & .technologies {
+            & img {
+              height: 2.5rem;
+            }
+            & img:not(:first-of-type) {
               margin-left: 1rem;
             }
           }
-          & .name{
+          & .name {
             font-weight: 700;
           }
-          & .description{
+          & .description {
             font-size: $mini-font-size;
           }
         }
@@ -169,11 +179,11 @@
         text-align: start;
         gap: 0rem 1rem;
         padding-top: 0;
-        & img.thumbnail{
+        & img.thumbnail {
           border: none;
           border-right: 1px solid white;
         }
-        & div.overview{
+        & div.overview {
           border-right: 1px solid white;
           height: 100%;
           display: flex;
@@ -181,11 +191,11 @@
           justify-content: space-between;
           padding: 2rem 0;
           box-sizing: border-box;
-          & img{
+          & img {
             height: 2.5rem;
           }
         }
-        & div.description{
+        & div.description {
           height: 100%;
           display: flex;
           flex-direction: column;

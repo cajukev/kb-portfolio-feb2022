@@ -1,8 +1,8 @@
 <footer>
-  <p>© KBweb, 2022</p>
+  <p>© Kevin Brousseau, 2022</p>
   <p>Châteauguay, Quebec, Canada</p>
   <p>514-550-7051</p>
-  <p>kbweb98@gmail.com</p>
+  <p>kevin.brousseau98@gmail.com</p>
 </footer>
 
 <style lang="scss">
