@@ -2,9 +2,10 @@
 	import { goto } from '$app/navigation';
 	import emailjs from 'emailjs-com';
 	import { VITE_EMAIL_USER } from '../lib/Env';
-	import { date } from '../store';
+	import { date } from '../stores';
 	export let timeslots;
 	export let lang;
+	const langs = ['en','fr']
 
 	const dateNow = new Date();
 	let dateDay = dateNow.getDate().toString();
@@ -139,6 +140,7 @@
 	const submit = async () => {
 		if(verify()){
 			// Send email
+			/*
 		emailjs.init(VITE_EMAIL_USER);
 		emailjs
 			.send('service_liae9za', 'template_193jaog', {
@@ -166,7 +168,7 @@
 			.then((response) => response.json())
 			.then((json) => {
 				date.set({date:dateTime})
-				goto(lang=="fr"?'/succes':'/en/success');
+				goto(lang == langs[0] ? "/success" : "/"+lang+"/success");
 				return json;
 			});
 		

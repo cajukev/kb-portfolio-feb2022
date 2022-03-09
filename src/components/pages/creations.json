@@ -2,11 +2,11 @@
   "en": {
     "h1": "A <span>superstar</span> of web development",
     "info": "All of my websites are built using modern high speed web technologies, offering the best performance on the market.",
-    "a": "Learn more",
+    "a": "Learn more on my blog",
     "visit":"Visit",
     "sites": [
       {
-        "name": "Lessons from an independant developer",
+        "name": "Lessons in modern web development",
         "description": "My blog where I post about web development",
         "technologies":[
           {"tech":"html"},
@@ -15,26 +15,43 @@
           {"tech":"svelte"},
           {"tech":"sass"}
         ],
-        "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. "
+        "info":"This website is a blog I'm writing in order to teach the modern web development process. By reading, you will learn the technologies I mastered in order to create such performant websites.",
+        "url":"https://kbweb.ca/",
+        "github":"https://github.com/cajukev/kb-blog"
       },
       {
-        "name": "Lessons from an independant developer",
-        "description": "My blog where I post about web development",
+        "name": "E T E R N I T Y Calculator",
+        "description": "School project where I built the front-end offor an advanced calculator",
         "technologies":[
           {"tech":"html"},
           {"tech":"css"},
           {"tech":"js"},
-          {"tech":"fauna"},
-          {"tech":"sass"}
+          {"tech":"react"},
+          {"tech":"spring"}
         ],
-        "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. "
+        "info":"While my team focused on the back-end of this project, I took care of the front-end. See why this calculator got voted 'Best Client' by both the teacher and the class.",
+        "url":"https://eternitycalculator.com/",
+        "github":"https://github.com/eternity-project-comp354/front-end"
+      },
+      {
+        "name": "SNAFU Game Showcase",
+        "description": "Site built to showcase a game made at a Game Jam",
+        "technologies":[
+          {"tech":"html"},
+          {"tech":"css"},
+          {"tech":"js"},
+          {"tech":"vue"}
+        ],
+        "info":"SNAFU is a game my friends and I created for the 2020 Global Game Jam. In this one, I show off a strong understanding of SVG animation.",
+        "url":"https://ggjsnafu.netlify.app/",
+        "github":"https://github.com/cajukev/snafu"
       }
     ]
   },
   "fr": {
-    "h1": "Un <span>star</span> du développement web",
+    "h1": "Une <span>star</span> du développement web",
     "info": "Toutes mes solutions sont bâties avec des technologies web à haute vitesse, offrant la meilleure performance technique sur le marché.",
-    "a": "En apprendre plus",
+    "a": "En apprendre plus avec mon blog",
     "visit":"Visiter",
     "sites": [
       {
@@ -47,19 +64,36 @@
           {"tech":"svelte"},
           {"tech":"sass"}
         ],
-        "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. "
+        "info":"Ce site est un blog où je publie sur le développement web moderne. En lisant ceci, vous pouvez apprendre les technologies que j'ai maîtrisé afin de créer des sites si performants.",
+        "url":"https://kbweb.ca/",
+        "github":"https://github.com/cajukev/kb-blog"
       },
       {
-        "name": "Lessons from an independant developer",
+        "name": "E T E R N I T Y Calculator",
         "description": "My blog where I post about web development",
         "technologies":[
           {"tech":"html"},
           {"tech":"css"},
           {"tech":"js"},
-          {"tech":"fauna"},
-          {"tech":"sass"}
+          {"tech":"react"},
+          {"tech":"spring"}
         ],
-        "info":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sed tortor enim cras viverra egestas. sed tortor enim cras viverra egestas. "
+        "info":"Alors que mon équipe ce concentrait sur le back-end, je m'occupais du front-end. Voyez pourquoi ceci a été voté 'Meilleur Client' par les professeurs.",
+        "url":"https://eternitycalculator.com/",
+        "github":"https://github.com/eternity-project-comp354/front-end"
+      },
+      {
+        "name": "SNAFU showcase de jeu",
+        "description": "Site bâti pour showcase un jeu créé dans le contexte d'un Game Jam 48 heures",
+        "technologies":[
+          {"tech":"html"},
+          {"tech":"css"},
+          {"tech":"js"},
+          {"tech":"vue"}
+        ],
+        "info":"SNAFU est un jeu que mes amis et moi avons créé dans le contexte du Global Game Jam 2020. Dans ce site, je démontre mes habiletés d'animation SVG.",
+        "url":"https://ggjsnafu.netlify.app/",
+        "github":"https://github.com/cajukev/snafu"
       }
     ]
   }

@@ -5,3 +5,6 @@ export const lang = writable('en', {
 export const page = writable('',{
   page:''
 });
+export const date = writable('date', {
+  date:''
+});

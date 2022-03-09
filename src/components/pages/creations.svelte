@@ -1,7 +1,7 @@
 <script>
   export let lang;
   import { en, fr } from "./creations.json";
-  const langs = ["en","fr"]
+  const langs = ["en", "fr"];
   let useLang;
   switch (lang) {
     case "fr":
@@ -22,13 +22,13 @@
     <h1>{@html useLang.h1}</h1>
 
     <p class="info">{useLang.info}</p>
-    <a href={lang == "en" ? "/contact" : "/fr/contact"}>{useLang.a}</a>
+    <a href={"https://kbweb.ca/" + (lang != langs[0] ? lang : "")}>{useLang.a}</a>
   </section>
   <section class="solution-list">
     {#each useLang.sites as site, i}
       <div class="soln">
         <div class="img-container">
-          <a href={"https://kb-blog-cajukev.vercel.app/" + (lang != langs[0] ? lang : "") }>
+          <a href={site.url}>
             <img alt={"site: " + site.name} class="thumbnail" src={"/sites/site-" + (i + 1) + "-400.jpg"} />
           </a>
         </div>
@@ -41,11 +41,11 @@
               <img src={"/" + tech.tech + ".svg"} alt={tech.tech + " logo"} title={tech.tech} />
             {/each}
           </div>
-          <a href={"https://kbweb.ca/" + (lang != langs[0] ? lang : "") } class="site-link">{useLang.visit}</a>
+          <a href={site.url} class="site-link">{useLang.visit}</a>
         </div>
-        <div class="description">
+        <div class="intro">
           <p>{site.info}</p>
-          <a href={"/" + (lang != langs[0] ? lang : "") }>Code</a>
+          <a href={site.github}>Code</a>
         </div>
       </div>
     {/each}
@@ -83,6 +83,7 @@
               linear-gradient(135deg, #ff7c05 0%, rgba(255, 184, 119, 0.770833) 99.99%, rgba(255, 122, 0, 0) 100%);
             box-shadow: 0rem 0rem 1rem rgba(233, 111, 0, 0.6);
             animation: square-spin 10s ease-in-out infinite;
+            z-index: 2;
           }
           &.v2 {
             background: #a6aef2;
@@ -144,6 +145,8 @@
           padding: 2rem 0;
           box-sizing: border-box;
           & .technologies {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             & img {
               height: 2.5rem;
             }
@@ -153,9 +156,17 @@
           }
           & .name {
             font-weight: 700;
+            font-size: $subheader-font-size;
           }
           & .description {
             font-size: $mini-font-size;
+          }
+        }
+        & .intro {
+          & a {
+            display: block;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
           }
         }
       }
@@ -218,12 +229,17 @@
             height: 2.5rem;
           }
         }
-        & div.description {
+        & .intro {
           height: 100%;
           display: flex;
           flex-direction: column;
+          justify-content: space-between;
           padding: 2rem 1rem 2rem 0;
           box-sizing: border-box;
+          & a{
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+          }
         }
       }
     }

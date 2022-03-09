@@ -16,7 +16,6 @@
   <PageTransition {url}>
     <slot lang={$lang}></slot>
   </PageTransition>
-  
   <Footer></Footer>
 </div>
 
