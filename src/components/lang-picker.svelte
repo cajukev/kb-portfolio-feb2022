@@ -6,11 +6,16 @@
   import { onMount } from "svelte";
   const langs = ["en", "fr"];
   let url;
-  $: url = $page.url.toString().split("/")
+  $: url = $page.url.toString().split("/");
   let option;
 
   let langChange = () => {
-    goto("/" + (lang != langs[0] ? lang + "/" + url.slice(3).toString().replace(",", "/") : url.slice(4).toString().replace(",", "/")));
+    goto(
+      "/" +
+        (lang != langs[0]
+          ? lang + "/" + url.slice(3).toString().replace(",", "/")
+          : url.slice(4).toString().replace(",", "/"))
+    );
   };
 </script>
 
@@ -22,12 +27,13 @@
 
 <style lang="scss">
   select#language {
-    width: min-content;
-    height: min-content;
-    background-color: transparent;
     border: none;
     font-size: 1rem;
     font-family: $other-font;
     font-weight: 700;
+    padding: 0.1rem;
+    border-radius: 0.2rem;
+    border: 1px solid white;
+    background-color: white;
   }
 </style>
