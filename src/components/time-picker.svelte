@@ -140,7 +140,7 @@
 	const submit = async () => {
 		if(verify()){
 			// Send email
-			/*
+			
 		emailjs.init(VITE_EMAIL_USER);
 		emailjs
 			.send('service_liae9za', 'template_193jaog', {
@@ -153,7 +153,7 @@
 			.then((status) => {
 				console.log(status);
 			});
-		// Post to DB*/
+		// Post to DB
 		const res = await fetch('/api/envoyer', {
 			method: 'POST',
 			body: JSON.stringify({
