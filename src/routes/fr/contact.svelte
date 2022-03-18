@@ -21,4 +21,9 @@
   
 </script>
   
+<svelte:head>
+  <title>{"Kevin Brousseau Portfolio"}</title>
+  <meta name="description" content={"Page de contact"}>
+</svelte:head>
+
 <Contact lang={"fr"} timeslots={timeslots_prop}></Contact>

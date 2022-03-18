@@ -19,5 +19,10 @@
   $lang = "en"
   $page = "contact"
 </script>
+
+<svelte:head>
+  <title>{"Kevin Brousseau Portfolio"}</title>
+  <meta name="description" content={"Contact Page"}>
+</svelte:head>
   
 <Contact lang={"en"} timeslots={timeslots_prop}></Contact>

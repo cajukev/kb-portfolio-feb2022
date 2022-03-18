@@ -5,4 +5,9 @@
   $page = "creations"
 </script>
   
+<svelte:head>
+  <title>{"Kevin Brousseau Portfolio"}</title>
+  <meta name="description" content={"Creations Page"}>
+</svelte:head>
+
 <Creations lang={"en"}></Creations>
